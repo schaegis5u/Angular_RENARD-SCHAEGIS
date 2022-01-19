@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-display-list',
@@ -8,7 +9,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class DisplayListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
     lundi : any[] = [];
     mardi : any[] = [];
@@ -78,5 +79,9 @@ export class DisplayListComponent implements OnInit {
       localStorage.removeItem("supprime");
       location.reload();
 }
+
+  ajouter() : void {
+    this.router.navigate(['/list/add']);
+  }
 
 }

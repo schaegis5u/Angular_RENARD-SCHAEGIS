@@ -94,6 +94,7 @@
       (cdkDropListDropped)="drop($event)">
       <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of classifie" cdkDrag>{{item}}</div>
     </div>
+    <button mat-button color="info" (click)="ajouter()">Ajouter</button>
   </div>
 
   <div class="example-container">

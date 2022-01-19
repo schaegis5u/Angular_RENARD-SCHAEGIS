@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PromiseRequest } from '../shared/services/promise/promise-request';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class FormComponent implements OnInit {
   Form!: FormGroup;
   public submitted = false;
 
-  constructor(public promise: PromiseRequest, private formBuilder : FormBuilder) { }
+  constructor(public promise: PromiseRequest, private formBuilder : FormBuilder, private router : Router) { }
 
   ngOnInit(): void {
     this.Form = this.formBuilder.group({
@@ -28,6 +29,10 @@ export class FormComponent implements OnInit {
     let tabactuel = JSON.parse(localStorage.getItem("classifie") || '[]');
     tabactuel.push(tache);
     localStorage.setItem('classifie', JSON.stringify(tabactuel));
+  }
+
+  retour() : void {
+    this.router.navigate(['/list/']);
   }
 
 }
