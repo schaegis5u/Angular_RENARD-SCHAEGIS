@@ -9,6 +9,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Http } from './services/http/http';
 import { PromiseRequest } from './services/promise/promise-request';
 import { FormComponent } from '../form/form.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { FormComponent } from '../form/form.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ScrollingModule,
   ],
   providers: [
     Http,
