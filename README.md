@@ -1,6 +1,13 @@
 # OrganiseMoi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+<h1>Planificateur d'emploi du temps</h1>
+<ul>
+  <li>
+    Page de visualisation de l'emploi du temps
+  </li>
+  <li>
+    Page d'ajout dans l'emploi du temps (utilisation d'un registerForm)
+  </li>
 
 ## Development server
 
