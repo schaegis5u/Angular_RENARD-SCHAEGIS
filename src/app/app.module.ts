@@ -8,7 +8,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import { ToDoListComponent } from './shared/component/to-do-list/to-do-list.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { DisplayListComponent } from './shared/component/display-list/display-list.component';
 import { DisplayComponent } from './display/display.component';
@@ -16,7 +15,6 @@ import { DisplayComponent } from './display/display.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ToDoListComponent,
     ToDoComponent,
     DisplayListComponent,
     DisplayComponent
