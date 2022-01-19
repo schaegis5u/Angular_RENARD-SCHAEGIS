@@ -1,89 +1,5 @@
 <div cdkDropListGroup style="text-align: center;">
-  <div class="example-container">
-    <h2>Lundi</h2>
 
-    <div
-      cdkDropList id="lundi"
-      [cdkDropListData]="lundi"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of lundi" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-
-  <div class="example-container">
-    <h2>Mardi</h2>
-
-    <div
-      cdkDropList id="mardi"
-      [cdkDropListData]="mardi"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of mardi" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-
-  <div class="example-container">
-    <h2>Mercredi</h2>
-
-    <div
-      cdkDropList id="mercredi"
-      [cdkDropListData]="mercredi"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of mercredi" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-
-  <div class="example-container">
-    <h2>Jeudi</h2>
-
-    <div
-      cdkDropList id="jeudi"
-      [cdkDropListData]="jeudi"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of jeudi" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-
-  <div class="example-container">
-    <h2>Vendredi</h2>
-
-    <div
-      cdkDropList id="vendredi"
-      [cdkDropListData]="vendredi"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of vendredi" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-
-  <div class="example-container">
-    <h2>Samedi</h2>
-
-    <div
-      cdkDropList id="samedi"
-      [cdkDropListData]="samedi"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of samedi" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-
-  <div class="example-container">
-    <h2>Dimanche</h2>
-
-    <div
-      cdkDropList id="dimanche"
-      [cdkDropListData]="dimanche"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of dimanche" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-
-  <br>
   <div class="example-container">
     <h2>A classifier</h2>
 
@@ -109,6 +25,91 @@
     </div>
     <button mat-button color="warn" (click)="supprimer()">Supprimer</button>
   </div>
+  <br/>
+  <div class="example-container">
+    <h2>Lun{{"di" | notreUPPERCASE}}</h2>
+
+    <div
+      cdkDropList id="lundi"
+      [cdkDropListData]="lundi"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of lundi" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Mar{{"di" | notreUPPERCASE}}</h2>
+
+    <div
+      cdkDropList id="mardi"
+      [cdkDropListData]="mardi"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of mardi" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Mercre{{"di" | notreUPPERCASE}}</h2>
+
+    <div
+      cdkDropList id="mercredi"
+      [cdkDropListData]="mercredi"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of mercredi" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Jeu{{"di" | notreUPPERCASE}}</h2>
+
+    <div
+      cdkDropList id="jeudi"
+      [cdkDropListData]="jeudi"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of jeudi" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Vendre{{"di" | notreUPPERCASE}}</h2>
+
+    <div
+      cdkDropList id="vendredi"
+      [cdkDropListData]="vendredi"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of vendredi" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Same{{"di" | notreUPPERCASE}}</h2>
+
+    <div
+      cdkDropList id="samedi"
+      [cdkDropListData]="samedi"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of samedi" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>{{"di" | notreUPPERCASE}}manche</h2>
+
+    <div
+      cdkDropList id="dimanche"
+      [cdkDropListData]="dimanche"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of dimanche" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
 
 </div>
 
