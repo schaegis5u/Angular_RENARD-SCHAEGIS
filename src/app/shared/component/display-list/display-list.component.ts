@@ -10,24 +10,59 @@ export class DisplayListComponent implements OnInit {
 
   constructor() { }
 
+    lundi : any[] = [];
+    mardi : any[] = [];
+    mercredi : any[] = [];
+    jeudi : any[] = [];
+    vendredi : any[] = [];
+    samedi : any[] = [];
+    dimanche : any[] = [];
+    classifie : any[] = [];
+
   ngOnInit(): void {
+
+    /*
+    let chaine = ['test','lol','OMEGALUL','BONJOUR','TUPEUXMARCHERSTP'];
+    localStorage.setItem('lundi', JSON.stringify(chaine));
+    */
+
+    this.lundi=JSON.parse(localStorage.getItem('lundi') || '[]');
+    this.mardi=JSON.parse(localStorage.getItem('mardi') || '[]');
+    this.mercredi=JSON.parse(localStorage.getItem('mercredi') || '[]');
+    this.jeudi=JSON.parse(localStorage.getItem('jeudi') || '[]');
+    this.vendredi=JSON.parse(localStorage.getItem('vendredi') || '[]');
+    this.samedi=JSON.parse(localStorage.getItem('samedi') || '[]');
+    this.dimanche=JSON.parse(localStorage.getItem('dimanche') || '[]');
+    this.classifie=JSON.parse(localStorage.getItem('classifie') || '[]');
+
   }
 
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+    drop(event: CdkDragDrop<string[]>) {
+      if (event.previousContainer === event.container) {
+        moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+      } else {
+        transferArrayItem(
+          event.previousContainer.data,
+          event.container.data,
+          event.previousIndex,
+          event.currentIndex,
+        );
+      }
 
-  done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+      let tabprevious = JSON.parse(localStorage.getItem(event.previousContainer.id) || '[]');
+      let tabactuel = JSON.parse(localStorage.getItem(event.container.id) || '[]');
 
-  drop(event: CdkDragDrop<string[]>) {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
-      transferArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex,
-      );
+      if(event.previousContainer == event.container && event.previousIndex == event.currentIndex ){
+
+      }
+      else{
+        tabactuel.splice(event.currentIndex, 0, tabprevious[event.previousIndex]);
+        localStorage.setItem(event.container.id,JSON.stringify(tabactuel));
+
+        tabprevious.splice(event.previousIndex,1)
+        localStorage.setItem(event.previousContainer.id,JSON.stringify(tabprevious))
+      }
     }
-  }
+
 }
 
