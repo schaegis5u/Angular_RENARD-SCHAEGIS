@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DisplayListComponent } from './component/display-list/display-list.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 
 
 @NgModule({
   declarations: [
-    DisplayListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    DragDropModule,
   ]
 })
 export class SharedModule { }
