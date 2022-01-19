@@ -32,8 +32,6 @@ import { FormComponent } from './form/form.component';
     MatIconModule,
     MatCardModule,
     DragDropModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
