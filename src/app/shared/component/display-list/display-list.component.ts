@@ -18,6 +18,7 @@ export class DisplayListComponent implements OnInit {
     samedi : any[] = [];
     dimanche : any[] = [];
     classifie : any[] = [];
+    supprime : any[] = [];
 
   ngOnInit(): void {
 
@@ -34,6 +35,7 @@ export class DisplayListComponent implements OnInit {
     this.samedi=JSON.parse(localStorage.getItem('samedi') || '[]');
     this.dimanche=JSON.parse(localStorage.getItem('dimanche') || '[]');
     this.classifie=JSON.parse(localStorage.getItem('classifie') || '[]');
+    this.supprime=JSON.parse(localStorage.getItem('supprime') || '[]');
 
   }
 
@@ -72,5 +74,9 @@ export class DisplayListComponent implements OnInit {
       }
     }
 
+    supprimer(): void{
+      localStorage.removeItem("supprime");
+      location.reload();
 }
 
+}

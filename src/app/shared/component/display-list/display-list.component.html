@@ -96,6 +96,19 @@
     </div>
   </div>
 
+  <div class="example-container">
+    <h2>A supprimer</h2>
+
+    <div
+      cdkDropList id="supprime"
+      [cdkDropListData]="supprime"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" style="justify-content: center;font-weight:800;" *ngFor="let item of supprime" cdkDrag>{{item}}</div>
+    </div>
+    <button mat-button color="warn" (click)="supprimer()">Supprimer</button>
+  </div>
+
 </div>
 
 
