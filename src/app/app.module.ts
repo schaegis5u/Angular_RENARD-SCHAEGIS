@@ -9,11 +9,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
 import { DisplayListComponent } from './shared/component/display-list/display-list.component';
 import { DisplayComponent } from './display/display.component';
-import { FormComponent } from './form/form.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -21,7 +19,6 @@ import { FormComponent } from './form/form.component';
     AppComponent,
     DisplayListComponent,
     DisplayComponent,
-    FormComponent
 
   ],
   imports: [
@@ -32,8 +29,10 @@ import { FormComponent } from './form/form.component';
     MatIconModule,
     MatCardModule,
     DragDropModule,
+    SharedModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
