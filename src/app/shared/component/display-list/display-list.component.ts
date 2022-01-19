@@ -55,11 +55,19 @@ export class DisplayListComponent implements OnInit {
       if(event.previousContainer == event.container && event.previousIndex == event.currentIndex ){
 
       }
+      else if(event.previousContainer == event.container){
+        tabactuel.splice(event.previousIndex, 1, tabprevious[event.currentIndex]);
+        tabactuel.splice(event.currentIndex, 1, tabprevious[event.previousIndex]);
+        localStorage.setItem(event.container.id,JSON.stringify(tabactuel));
+      }
       else{
+        console.log("current"+ event.currentIndex, "; previous "+event.previousIndex)
         tabactuel.splice(event.currentIndex, 0, tabprevious[event.previousIndex]);
         localStorage.setItem(event.container.id,JSON.stringify(tabactuel));
+        console.log(tabactuel);
 
         tabprevious.splice(event.previousIndex,1)
+        console.log(tabprevious);
         localStorage.setItem(event.previousContainer.id,JSON.stringify(tabprevious))
       }
     }
