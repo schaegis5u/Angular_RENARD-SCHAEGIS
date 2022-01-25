@@ -10,6 +10,7 @@ import { Http } from './services/http/http';
 import { PromiseRequest } from './services/promise/promise-request';
 import { FormComponent } from '../form/form.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatFormFieldModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatSnackBarModule,
     ScrollingModule,
   ],
   providers: [
