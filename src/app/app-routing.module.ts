@@ -5,6 +5,9 @@ import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   {
+    path: '', redirectTo: '/list', pathMatch: 'full'
+  },
+  {
     path:'list',
     component: DisplayComponent,
   },
