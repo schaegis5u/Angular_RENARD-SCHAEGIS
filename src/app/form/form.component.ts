@@ -30,6 +30,7 @@ export class FormComponent implements OnInit {
     let tabactuel = JSON.parse(localStorage.getItem("classifie") || '[]');
     tabactuel.push(tache);
     localStorage.setItem('classifie', JSON.stringify(tabactuel));
+    
   }
 
   retour() : void {

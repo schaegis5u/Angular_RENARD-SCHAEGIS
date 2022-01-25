@@ -1,7 +1,7 @@
 <form style="text-align: center;" class="example-form" [formGroup]="Form" (ngSubmit)="onSubmit()">
   <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Nom de la tâche à ajouter</mat-label>
-    <input type="tache" matInput placeholder="" formControlName='tache'>
+    <mat-label>Ajouter une tâche</mat-label>
+    <input type="tache" matInput placeholder="Promener le chien" formControlName='tache'>
   </mat-form-field>
   <br/>
 <button type="submit" mat-raised-button color="primary" (click)="snackBar()">Ajouter la tâche</button>

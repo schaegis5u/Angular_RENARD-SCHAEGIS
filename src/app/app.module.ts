@@ -14,6 +14,8 @@ import { DisplayComponent } from './display/display.component';
 import { SharedModule } from './shared/shared.module';
 import { Dipipe } from './shared/pipe/dipipe.pipe';
 import { DialogDisplayComponent } from './shared/component/dialog-display/dialog-display.component';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { DialogDisplayComponent } from './shared/component/dialog-display/dialog
   ],
   imports: [
     BrowserModule,
+    MatBadgeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,

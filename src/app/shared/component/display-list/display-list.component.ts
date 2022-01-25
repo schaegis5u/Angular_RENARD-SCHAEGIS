@@ -26,6 +26,16 @@ export class DisplayListComponent implements OnInit {
   classifie: any[] = [];
   supprime: any[] = [];
 
+  tailleL: any = 0;
+  tailleM: any = 0;
+  tailleMe: any = 0;
+  tailleJ: any = 0;
+  tailleV: any = 0;
+  tailleSa: any = 0;
+  tailleD: any = 0;
+  tailleC: any = 0;
+  tailleS: any = 0;
+
   ngOnInit(): void {
     /*
     let chaine = ['test','lol','OMEGALUL','BONJOUR','TUPEUXMARCHERSTP'];
@@ -33,14 +43,23 @@ export class DisplayListComponent implements OnInit {
     */
 
     this.lundi = JSON.parse(localStorage.getItem('lundi') || '[]');
+    this.tailleL = this.lundi.length;
     this.mardi = JSON.parse(localStorage.getItem('mardi') || '[]');
+    this.tailleM = this.mardi.length;
     this.mercredi = JSON.parse(localStorage.getItem('mercredi') || '[]');
+    this.tailleMe = this.mercredi.length;
     this.jeudi = JSON.parse(localStorage.getItem('jeudi') || '[]');
+    this.tailleJ = this.jeudi.length;
     this.vendredi = JSON.parse(localStorage.getItem('vendredi') || '[]');
+    this.tailleV = this.vendredi.length;
     this.samedi = JSON.parse(localStorage.getItem('samedi') || '[]');
+    this.tailleSa = this.samedi.length;
     this.dimanche = JSON.parse(localStorage.getItem('dimanche') || '[]');
+    this.tailleD = this.dimanche.length;
     this.classifie = JSON.parse(localStorage.getItem('classifie') || '[]');
+    this.tailleC = this.classifie.length;
     this.supprime = JSON.parse(localStorage.getItem('supprime') || '[]');
+    this.tailleS = this.supprime.length;
   }
 
   drop(event: CdkDragDrop<string[]>) {
@@ -90,6 +109,16 @@ export class DisplayListComponent implements OnInit {
         JSON.stringify(tabprevious)
       );
     }
+
+    this.tailleL = this.lundi.length;
+    this.tailleM = this.mardi.length;
+    this.tailleMe = this.mercredi.length;
+    this.tailleJ = this.jeudi.length;
+    this.tailleV = this.vendredi.length;
+    this.tailleSa = this.samedi.length;
+    this.tailleD = this.dimanche.length;
+    this.tailleC = this.classifie.length;
+    this.tailleS = this.supprime.length;
   }
 
   supprimer(): void {
