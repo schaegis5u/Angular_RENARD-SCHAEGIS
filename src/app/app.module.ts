@@ -12,7 +12,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import { DisplayListComponent } from './shared/component/display-list/display-list.component';
 import { DisplayComponent } from './display/display.component';
 import { SharedModule } from './shared/shared.module';
-import { NotreUPPERCASEPipe } from './shared/pipe/notre-uppercase.pipe';
+import { Dipipe } from './shared/pipe/dipipe.pipe';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { NotreUPPERCASEPipe } from './shared/pipe/notre-uppercase.pipe';
     AppComponent,
     DisplayListComponent,
     DisplayComponent,
-    NotreUPPERCASEPipe,
+    Dipipe,
 
   ],
   imports: [
