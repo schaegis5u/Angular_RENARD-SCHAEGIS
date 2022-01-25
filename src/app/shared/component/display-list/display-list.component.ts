@@ -5,6 +5,8 @@ import {
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { Router, RouterModule, Routes } from '@angular/router';
+import { DialogDisplayComponent } from '../dialog-display/dialog-display.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-display-list',
@@ -12,7 +14,7 @@ import { Router, RouterModule, Routes } from '@angular/router';
   styleUrls: ['./display-list.component.scss'],
 })
 export class DisplayListComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, public dialog: MatDialog) {}
 
   lundi: any[] = [];
   mardi: any[] = [];
@@ -91,9 +93,11 @@ export class DisplayListComponent implements OnInit {
   }
 
   supprimer(): void {
-    localStorage.removeItem('supprime');
-    location.reload();
+    const dialogRef = this.dialog.open(DialogDisplayComponent, {
+      width: "300px",
+    });
   }
+
 
   ajouter(): void {
     this.router.navigate(['/list/add']);

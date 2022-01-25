@@ -11,11 +11,12 @@ import { PromiseRequest } from './services/promise/promise-request';
 import { FormComponent } from '../form/form.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     FormComponent,
+
   ],
   imports: [
     CommonModule,
@@ -29,6 +30,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HttpClientModule,
     MatSnackBarModule,
     ScrollingModule,
+    MatDialogModule,
   ],
   providers: [
     Http,
